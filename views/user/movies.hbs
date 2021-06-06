@@ -1,0 +1,37 @@
+<section style="z-index: 1; padding-top: 6em;">
+    <div class="container-fluid">
+        <div class="row">
+            
+            {{#each movies}}
+            <div class="col-6 col-md-3">
+                <div class="card m-4" >
+                    <img style="height: 300px;" src="/images/{{this._id}}.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.Name}}</h5>
+                        <p>{{this.price}}</p>
+                         <p style="display: none;" class="card-text">{{this.Description}}</p>
+                        <a href="/book/{{this._id}}" class="btn btn-danger col-8">Book Ticket</a>
+                          <a  class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" title="Watch Trailer"
+                             style="float:right;"
+                             class="btn btn-light"
+                              href="{{this.Link}}"
+                             ><i
+                  class=" col-4 far fa-play-circle fa-2x"
+                  style="color: black;"
+                ></i></a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+           
+        </div>
+        </div>
+    </section>
+    <style>
+  .card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+     
+  }
+ 
+</style>

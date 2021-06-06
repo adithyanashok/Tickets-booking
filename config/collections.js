@@ -1,0 +1,11 @@
+module.exports={
+    MOVIES_COLLECTION:'movies',
+    EVENTS_COLLECTION:'events',
+    SPORTS_COLLECTION:'sports',
+    USER_COLLECTION:'user',
+    THUMB_MOVIES:'movthumb',
+    THUMB_EVENTS:'thumbevent',
+    THUMB_SPORTS:'thumbsports',
+    MOVIE_TICKETS:'moviesticket',
+    CART_COLLECTION:'cart'
+}

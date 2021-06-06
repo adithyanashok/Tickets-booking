@@ -1,0 +1,30 @@
+<section style="z-index: 1; padding-top: 6em;">
+    <div class="container-fluid">
+        <div class="row">
+            {{#each events}}
+            <div class="col-6 col-md-3" style="float: left;">
+                <div class="card m-4">
+                    <img style="height: 300px;" src="/images/{{this._id}}.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.Name}}</h5>
+                        <p>{{this.price}}</p>
+                        <p style="display: none;" class="card-text">{{this.Description}}</p>
+                        <a href="/book2/{{this._id}}" class="btn btn-primary col-12">Book Pass</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        </div>
+    </section>
+    <style>
+  .card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+     
+  }
+  .card{
+    border-radius: 50px;
+  }
+ 
+</style>

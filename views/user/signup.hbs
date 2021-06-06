@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-6 m-auto mt-5">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        <div class="container mt-5 pl-5">
+            <h2 class="text-center">Create New Account</h2>
+            <form id="forms" action="/signup" method="POST">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="name" class="form-control" name="Name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="">Email address</label>
+                    <input type="email" id="inp" class="form-control" name="Email" placeholder="Enter Email">
+                    <label style="display: none;" id="error">Enter 4 character</label>
+                </div>
+                 <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" name="Password" placeholder="Password">
+                </div>
+                <a href="/login">Already have Account</a>
+                <button style="float: right;" id="btn" type="submit" class="btn btn-primary ">signup</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+ <script src="/public/javascripts/script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+<script>
+     $(document).ready(function(){
+            $("#btn").click(function(){
+                 
+                 $("#inp").blur(function(){
+                var text = $(this).val()
+                if(text.length<4){
+                    //alert("Enter minimum Characters")
+                    $("#error").show()
+                }else{                   
+                    $("#error").hide()
+                }
+
+            })
+             })
+</script>

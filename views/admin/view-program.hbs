@@ -1,0 +1,241 @@
+<section>
+    <div class="container">
+        <h4 class="text-center m-3" style="color:#2d394b ;">Movies</h4>
+        <div class="row">
+            <a href="/admin/add-movies" class="btn btn-success">Add Movies</a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">price</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                    <th>image</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each movies}}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.Description}}</td>
+                    <td>{{this.Link}}</td>
+                    <td><img style="height: 50px; width: 50px;" src="/images/{{this._id}}.jpg" alt=""></td>
+                     <td>
+            {{!-- <a href="/admin/edit-movies/{{this._id}}" class="btn btn-primary">Edit</a> --}}
+            <a href="/admin/delete-movies/{{this._id}}" class="btn btn-danger" onclick="return confirm('Are You Want To Delete {{this.Name}}')">Delete</a>
+          </td>
+                </tr>
+
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h4 class="text-center m-3" style="color:#2d394b ;">Thumb Movies</h4>
+        <div class="row">
+            <a href="/admin/thumbmovies" class="btn btn-success">Add Thumbnail Movies</a>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">price</th>
+                    <th>Description</th>
+                   
+                    <th>image</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each movthumb}}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.Description}}</td>
+                   
+                    <td><img style="height: 50px; width: 50px;" src="/images/{{this._id}}.jpg" alt=""></td>
+                     <td>
+            {{!-- <a href="/admin/edit-tmovies/{{this._id}}" class="btn btn-primary">Edit</a> --}}
+            <a href="/admin/delete-tmovies/{{this._id}}" class="btn btn-danger" onclick="return confirm('Are You Want To Delete {{this.Name}}')">Delete</a>
+          </td>
+                </tr>
+
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+<section>
+    <div class="container">
+        <h4 class="text-center m-3" style="color:#2d394b ;">Events</h4>
+        <div class="row">
+            <a href="/admin/add-events" class="btn btn-success">Add Events</a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">price</th>
+                  <th>Description</th>
+                    <th>image</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each events}}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.Description}}</td>
+                    <td><img style="height: 50px; width: 50px;" src="/images/{{this._id}}.jpg" alt=""></>
+                    
+                     <td>
+            {{!-- <a href="/admin/edit-event/{{this._id}}" class="btn btn-primary">Edit</a> --}}
+            <a href="/admin/delete-event/{{this._id}}" class="btn btn-danger" onclick="return confirm('Are You Want To Delete {{this.Name}}')">Delete</a>
+          </td>
+                </tr>
+
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h4 class="text-center m-3" style="color:#2d394b ;">Thumb Events</h4>
+        <div class="row">
+            <a href="/admin/thumbevent" class="btn btn-success">Add Thumbnail Events</a>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">price</th>
+                   <th>Description</th>
+                    
+                    <th>image</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each thumbevent}}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.price}}</td>
+                   <td>{{this.Description}}</td>
+                   
+                    <td><img style="height: 50px; width: 50px;" src="/images/{{this._id}}.jpg" alt=""></td>
+                     <td>
+            {{!-- <a href="/admin/edit-tevents/{{this._id}}" class="btn btn-primary">Edit</a> --}}
+            <a href="/admin/delete-tevents/{{this._id}}" class="btn btn-danger" onclick="return confirm('Are You Want To Delete {{this.Name}}')">Delete</a>
+          </td>
+                </tr>
+
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4 class="text-center m-3" style="color:#2d394b ;">Sports</h4>
+        <div class="row">
+            <a href="/admin/add-sports" class="btn btn-success">Add Sports</a>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">price</th>
+                   <th>Description</th>
+                    
+                    <th>image</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each sports}}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.price}}</td>
+                   <td>{{this.Description}}</td>
+                   
+                    <td><img style="height: 50px; width: 50px;" src="/images/{{this._id}}.jpg" alt=""></td>
+                     <td>
+            {{!-- <a href="/admin/edit-sports/{{this._id}}" class="btn btn-primary">Edit</a> --}}
+            <a href="/admin/delete-sports/{{this._id}}" class="btn btn-danger" onclick="return confirm('Are You Want To Delete {{this.Name}}')">Delete</a>
+          </td>
+                </tr>
+
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+    <div class="container">
+        <h4 class="text-center m-3" style="color:#2d394b ;">Thumb Sports</h4>
+        <div class="row">
+            <a href="/admin/thumbsports" class="btn btn-success">Add Thumbnail Sports</a>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">price</th>
+                   <th>Description</th>
+                    
+                    <th>image</th>
+                    <th>Edit/Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each thumbsports}}
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.price}}</td>
+                    <td>{{this.Description}}</td>
+                   
+                    <td><img style="height: 50px; width: 50px;" src="/images/{{this._id}}.jpg" alt=""></td>
+                     <td>
+            {{!-- <a href="/admin/edit-tsports/{{this._id}}" class="btn btn-primary">Edit</a> --}}
+            <a href="/admin/delete-tsports/{{this._id}}" class="btn btn-danger" onclick="return confirm('Are You Want To Delete {{this.Name}}')">Delete</a>
+          </td>
+                </tr>
+
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</section>
+

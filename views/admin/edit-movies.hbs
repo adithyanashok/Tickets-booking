@@ -1,0 +1,40 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="colmd-6">
+                <h2 class="text-center">Edit Movies</h2>
+                <form action="/admin/edit-movies/{{movies._id}}" method="POST" enctype="multipart/form-data">
+                    <label for="">Name</label>
+                    <input type="text" name="Name" class="form-control" value="{{movies.Name}}">
+
+                  
+                     <label for="">price</label>
+                    <input type="text" name="price" class="form-control" value="{{movies.price}}">
+                    <label for="">Year</label>
+                    <input type="text" name="Year" class="form-control">
+
+                    <label for="">Genre</label>
+                    <input type="text" name="Genre" class="form-control">
+
+                    <label for="">Time</label>
+                    <input type="text" name="Time" class="form-control">
+
+                    <label for="">Description</label>
+                    <input name="Description" type="text"class="form-control">
+
+                     <label for="">image</label>
+                     <img src="/images/{{movies._id}}.jpg" alt="" style="width: 100px; height: auto;" id="imgView">
+                    <input name="image" type="file"class="form-control" onchange="viewImage(event)">
+
+                    <button type="submit" class="btn btn-success mt-4">submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    function viewImage(event){
+        document.getElementById("imgView").src=URL.createObjectURL(event.target.files[0])
+    }
+</script>

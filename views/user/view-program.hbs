@@ -1,0 +1,149 @@
+<section>
+  <div class="row">
+    <div
+      style="padding-top: 5em;"
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://www.intofilm.org/intofilm-production/6183/scaledcropped/970x546/resources/6183/abominable-web-header-1792x1008px.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="https://thewvupchronicle.files.wordpress.com/2020/02/joker-poster.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="https://wallpaperaccess.com/full/1952721.jpg"
+            class="d-block w-100 img-fluid"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="float: left; width: 100%;">
+  <h4 class="mt-2 text-center">Movies</h4>
+  <div class="container-fluid">
+    <div class="row">
+      <a class=" see text-end" href="/movies">See more</a>
+      {{#each movthumb}}
+        <div class="col-6 col-md-3" style="float: left;">
+          <div id="cards" class="card m-4">
+            <img
+              style="height: 300px;"src="/images/{{this._id}}.jpg" class="card-img-top" alt="..."  />
+            <div class="card-body">
+              <h5 class="card-title">{{this.Name}}</h5>
+              <p>{{this.price}}</p>
+               <p style="display: none;" class="card-text">{{this.description}}</p>
+              <a href="/book4/{{this._id}}" class="btn btn-danger col-8">Book Ticket</a>
+              <a  class="btn btn-light" data-bs-toggle="tooltip" data-bs-placement="top" title="Watch Trailer"
+                style="float:right;"
+                class="btn btn-light"
+                href="{{this.Link}}"
+              ><i
+                  class=" col-4 far fa-play-circle fa-2x"
+                  style="color: black;"
+                ></i></a>
+
+            </div>
+          </div>
+        </div>
+
+      {{/each}}
+    </div>
+
+  </div>
+</section>
+
+<section style="float: left; width: 100%;">
+  <h4 class="mt-2 text-center">Events</h4>
+  <div class="container-fluid">
+    <div class="row">
+       <a class=" see text-end" href="/events">See more</a>
+      {{#each thumbevent}}
+        <div class="col-6 col-md-3" style="float: left;">
+          <div class="card m-4">
+            <img
+              style="height: 300px;"
+              src="/images/{{this._id}}.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{this.Name}}</h5>
+              <p>{{this.price}}</p>
+               <p style="display: none;" class="card-text">{{this.description}}</p>
+              <a href="/book5/{{this._id}}" class="btn btn-primary col-12">Book Pass</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<section style="float: left; width: 100%;">
+  <h4 class="mt-2 text-center">Sports</h4>
+  <div class="container-fluid">
+    <div class="row">
+       <a class=" see text-end" href="/sports">See more</a>
+      {{#each thumbsports}}
+        <div class="col-6 col-md-3" style="float: left;">
+          <div class="card m-4">
+            <img
+              style="height: 300px;"
+              src="/images/{{this._id}}.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{this.Name}}</h5>
+              <p>{{this.price}}</p>
+              <p style="display: none;" class="card-text">{{this.description}}</p>
+              <a href="/book6/{{this._id}}" class="btn btn-success col-12">Book Pass</a>
+
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+<style>
+  .card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+     
+  }
+  .see:hover{
+    text-decoration: underline;
+  }
+  .see{
+    text-decoration: none;
+  }
+  
+ 
+</style>
+    
+  

@@ -1,0 +1,114 @@
+<header style=" width: 100%; position: fixed;   z-index: 2;">
+
+  <nav
+    class="navbar navbar-expand-lg navbar-light p-3"
+    style="background: #2d394b; width: 100%; margin: 0px;"
+  >
+
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="/">
+        <h3  class="fas fa-ticket-alt ">
+          Book<span style="color: red;">i</span>Show</h3>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        {{! <ul class="navbar-nav mb-10 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link active text-white"
+              aria-current="page"
+              href="#"
+            >Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/tickets">Tickets</a>
+          </li>
+        </ul> }}
+
+        <form
+          action="/search"
+          method="POST"
+          class="d-flex"
+          style=" width: 450px;"
+        >
+          <input
+            class="form-control text-align:center me-4"
+            href="#text"
+            type="search"
+            placeholder="Search for Movies,Events and sports"
+            aria-label="Search"
+          />
+          <button
+            style="border: none;"
+            class="btn btn-outline-success"
+            type="submit"
+          >Search</button>
+        </form>
+        <div class="root ms-auto">
+          <ul class="navbar-nav mb-10 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="/"
+              >Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white"
+                aria-current="page"
+                href="/movies"
+              >Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/sports">Sports</a>
+            </li>
+            <div class="dropdown">
+              <button
+                class="btn btn-#2d394b text-white dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              {{#if user}}
+              {{user.Name}}
+              {{else}}
+                Details
+                {{/if}}
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                
+                {{#if user}}
+                  <a class="dropdown-item" href="/logout">Logout</a>
+                {{else}}
+                  <a class="dropdown-item" href="/login">Login</a>
+                {{/if}}
+              </ul>
+            </div>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<style>
+  .nav-link:hover{
+    text-decoration: underline;
+    text-decoration-color: gold;
+  }
+</style>
